@@ -6,3 +6,7 @@ authors = ["Abdul Rahman Sibahi <a.sibahi@gmail.com"]
 description = "Dua of the Day: shell utility"
 
 [dependencies]
+dirs = "6.0.0"
+pico-args = "0.5.0"
+rand ={version =  "0.9.1", default-features = false, features = ["small_rng", "os_rng"]}
+terminal_size = "0.4.2"
