@@ -1,0 +1,8 @@
+[package]
+name = "dotd"
+version = "0.1.0"
+edition = "2024"
+authors = ["Abdul Rahman Sibahi <a.sibahi@gmail.com"]
+description = "Dua of the Day: shell utility"
+
+[dependencies]
