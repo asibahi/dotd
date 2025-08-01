@@ -32,6 +32,9 @@ fn main() {
 	if args.contains("--rev") || args.contains("--reverse") {
 		line = line.chars().rev().collect();
 	}
+	if args.contains("--rev-words") {
+		line = line.split_whitespace().rev().map(|s| format!("{s} ")).collect();
+	}
 	println!("{line:>0$}", width as usize);
 }
 
@@ -42,6 +45,10 @@ fn print_help() {
 	println!("Print a dua, read from $HOME/.prayers\n");
 	println!("OPTIONS:");
 	println!("{:>s$} {:<l$}\treverse the whole text. useful for e.g. Ghostty", "", "--rev");
+	println!(
+		"{:>s$} {:<l$}\treverse the words order. useful for some terminals",
+		"", "--rev-words"
+	);
 	println!("{:>s$} {:<l$}\tprint this message", "-h", "--help");
 }
 
